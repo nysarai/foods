@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: peru;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px; /* Adjust the margin to match the height of the navbar */
+}
+
+img {
+  width: 350px;
+  height: 350px;
+}
+
+.navbar {
+  margin-bottom: 10px; /* Space between navbar and the cards */
+}
