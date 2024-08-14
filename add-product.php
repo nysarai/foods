@@ -27,15 +27,17 @@
         <li class="nav-item">
           <a class="nav-link" href="add-product.php">Add Products</a>
         </li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-<form action="./post-product.php" >
-    <input placeholder="Email" name="email" />
-    <input placeholder="Password" name="password"/>
+<form action="post-product.php" >
+  <!-- // yeta method huncha post or get(by default) -->
+    <input placeholder="Enter expiry date" name="expiryDate" type ="date" />
+    <input placeholder="Enter the product name" name="name" />
+    <input placeholder="Enter image URL" name="imageURL" />
+
     <button type="submit">Submit</button>
 </form>    
 </body>

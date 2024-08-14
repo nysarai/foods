@@ -2,7 +2,7 @@
 $conn = mysqli_connect("localhost","root","oreo@7904","hungry_hippo"); //php driver
 //var_dump($conn);
 
-$query = "SELECT * FROM foods";
+$query = "SELECT * FROM foods order by createdAt DESC;";
 $result= mysqli_query($conn, $query);
 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 echo "<pre>";
@@ -11,7 +11,7 @@ echo "</pre>";
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>   
 <html lang="en">
 
 <head>
@@ -54,10 +54,12 @@ echo "</pre>";
     <div class="card-body">
       <h2 class="card-name"><?php echo $data["name"]?></h2>
       <p class= "card-text">
-      <?php if($data["recommendedForKid"]==1){
+      <?php if($data["recommendedForKid"]==1)
+       {
         echo "Recommended for kids! ";
         }
-        else{
+        else
+        {
          echo "Not Recomended for kids";
         }
       ?>
@@ -71,7 +73,7 @@ echo "</pre>";
 
         <button type="button" class="btn btn-outline-danger">Delete</button>
         <button type="button" class="btn btn-outline-secondary">Edit</button>
-        <a href="#" class="btn btn-primary">ORDER NOW</a>
+        
     
       </div>
     </div>
